@@ -1,0 +1,16 @@
+{
+  "name": "PBL",
+  "version": "0.0.1",
+  "description": "Grammar package for the proprietary language, PBL",
+  "author": {
+    "name": "Chris Nichols",
+    "email": "ichrisnichols@gmail.com"
+  },
+  "repository": "https://github.com/atom/pbl",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

@@ -1,0 +1,32 @@
+scopeName: 'source.pbl'
+name: 'PBL'
+filetypes: ['pbl']
+patterns: [
+  {
+    comment: 'reserved words begins with @ character'
+    match: '@[^\S ]+' #'(?<!\\.)\\b(BEGIN|begin|case|class|else|elsif|END|end|ensure|for|if|in|module|rescue|then|unless|until|when|while)\\b(?![?!])'
+    name: 'keyword.pbl'
+  }
+  {
+    name: 'string.quoted.double.pbl'
+    begin: '"'
+    end: '"'
+    patterns: [
+      {
+        name: 'constant.character.escape.pbl'
+        match: '\\.'
+      }
+    ]
+  }
+  {
+    contentName: 'string.quoted.comment.pbl'
+    comment: 'PBL uses markup tags for comments'
+    begin: '@comment'
+    end: '@end-comment'
+    patterns: [
+      {
+        match: '\\.'
+      }
+    ]
+  }
+]
